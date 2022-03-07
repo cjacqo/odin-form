@@ -6,6 +6,7 @@
     --lighterGreen: rgb(158, 160, 138);
     --lightestGreen: rgba(158, 160, 138, 0.5);
     --purple: rgb(121, 34, 172);
+    --error: rgb(255, 52, 55);
 }
 
 *,
@@ -144,6 +145,7 @@ label {
     color: var(--lighterGreen);
     text-transform: uppercase;
     font-size: 0.85rem;
+    margin-bottom: 0.25rem;
 }
 
 .form-control {
@@ -152,7 +154,21 @@ label {
 }
 
 input {
-    padding: 0.33rem 0;
+    padding: 0.33rem 0 0.33rem 0.33rem;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+input:focus {
+    outline: 3px solid var(--purple);
+    -webkit-box-shadow: 0px 13px 9px -9px rgba(0,0,0,0.95); 
+    box-shadow: 0px 13px 9px -9px rgba(0,0,0,0.95);
+}
+
+input.error {
+    /* background-color: rgba(255,0,0,0.3); */
+    outline: 3px solid var(--error);
 }
 
 button {
