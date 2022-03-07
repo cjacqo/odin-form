@@ -1,0 +1,109 @@
+:root {
+    --darkerGreen: rgb(5, 16, 2);
+    --darkGreen: rgb(27, 37, 14);
+    --baseGreen: rgb(56, 66, 38);
+    --lightGreen: rgb(124, 129, 95);
+    --lighterGreen: rgb(158, 160, 138);
+    --purple: rgb(100, 74, 115);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.flex {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.parent {
+
+}
+
+.parent > * {
+    height: 100vh;
+}
+
+.section {}
+
+.section.left {
+    width: 40%;
+    background-image: url('./imgs/bg.jpg');
+    background-size: cover;
+    color: #FFF;
+    position: relative;
+}
+
+.title-bar {
+    margin-top: 5rem;
+    padding: 3rem;
+    font-family: 'Fredoka One', cursive;
+    background-color: rgba(0,0,0,0.65);
+}
+
+.title {
+    font-size: 4rem;
+}
+
+.title.logo {
+    padding-right: 1rem;
+}
+
+.caption-bar {
+    position: absolute;
+    bottom: 5%;
+    width: 100%;
+    text-align: center;
+}
+
+.section.right {
+    background-color: var(--lighterGreen);
+    width: 60%;
+    display: flex;
+    justify-content: stretch;
+    align-items: flex-start;
+}
+
+.margin {
+    padding: 0 2rem;
+}
+
+.section.right > .wrapper {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+}
+
+.hero-text {
+    font-size: 1.333rem;
+}
+
+.hero-text > p:nth-child(2) {
+    margin: 4rem 0;
+}
+
+.form.container {
+    width: 100%;
+    background-color: var(--darkerGreen);
+    color: var(--purple);
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
