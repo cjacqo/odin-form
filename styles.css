@@ -4,7 +4,8 @@
     --baseGreen: rgb(56, 66, 38);
     --lightGreen: rgb(124, 129, 95);
     --lighterGreen: rgb(158, 160, 138);
-    --purple: rgb(100, 74, 115);
+    --lightestGreen: rgba(158, 160, 138, 0.5);
+    --purple: rgb(121, 34, 172);
 }
 
 *,
@@ -19,6 +20,10 @@ body {
     width: 100vw;
     height: 100vh;
     overflow: hidden;
+}
+
+a {
+    text-decoration: none;
 }
 
 .flex {
@@ -68,7 +73,7 @@ body {
 }
 
 .section.right {
-    background-color: var(--lighterGreen);
+    background-color: var(--lightestGreen);
     width: 60%;
     display: flex;
     justify-content: stretch;
@@ -91,15 +96,91 @@ body {
 
 .hero-text {
     font-size: 1.333rem;
+    color: var(--baseGreen);
 }
 
 .hero-text > p:nth-child(2) {
     margin: 4rem 0;
+    font-weight: bold;
+    color: var(--darkGreen);
 }
 
 .form.container {
     width: 100%;
     background-color: var(--darkerGreen);
+    color: var(--purple);
+    padding: 2rem 0;
+    -webkit-box-shadow: 0px 13px 9px -9px rgba(0,0,0,0.95); 
+    box-shadow: 0px 13px 9px -9px rgba(0,0,0,0.95);
+}
+
+.colFlex {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.form-title {
+    color: #E4E4E4;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+fieldset {
+    display: flex;
+    border: none;
+    gap: 10px;
+}
+
+fieldset > * {
+    flex: 1;
+}
+
+label {
+    color: var(--lighterGreen);
+    text-transform: uppercase;
+    font-size: 0.85rem;
+}
+
+.form-control {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    padding: 0.33rem 0;
+}
+
+button {
+    background-color: transparent;
+    border: 3px solid var(--purple);
+    border-radius: 15px;
+    color: var(--purple);
+    text-transform: uppercase;
+    font-size: 1.125rem;
+    font-weight: bold;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
+}
+
+button:hover {
+    background-color: var(--purple);
+    color: #E4E4E4;
+    transition: all 300ms ease-in-out;
+}
+
+.swap-form.container {
+    color: var(--lighterGreen);
+}
+
+.log-in {
+    font-weight: bold;
     color: var(--purple);
 }
 
